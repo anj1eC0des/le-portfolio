@@ -2,9 +2,12 @@ import './App.css'
 import { Card } from './components/ui/card'
 // import { AvatarImage } from './components/ui/avatar'
 import { Avatar, AvatarImage } from './components/ui/avatar'
-import { AvatarFallback } from '@radix-ui/react-avatar'
-
+import { AvatarFallback } from './components/ui/avatar'
+import Cmp from './Cmp';
+import Skills from './Skills';
 function App() {
+  const skills=['java']
+  const content= <Skills content={skills}/>
   return (
     <>
     <div className='dark '>
@@ -15,12 +18,13 @@ function App() {
           <AvatarFallback>SD</AvatarFallback>
         </Avatar>
         <Card className='col-span-2 h-fit'>
-          <div className="flex justify-start px-2 italic ">
+          <div className="flex justify-start text-left px-2 italic ">
             Hi! I am Denn :3 Nice to meet you!<br/>
             I am a backend dev and I like working on exciting problems.<br/>
           </div>
         </Card>
         </div>
+      <Cmp title='Skills' content='skills'/>
       </Card>
     </div>
     </>
